@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Air Fryer Oven (12in) - Steam Infusion, Compact, 6-in-1. $150 from $299.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- PROMO BAR -->
+  <div class="promo-bar">
+    <div class="promo-track">
+      <span class="promo-item">SUMMER SALE -- Up to 30% Off Steam Ovens</span>
+      <span class="promo-item"> | </span>
+      <span class="promo-item">Ships Within 48 Hours</span>
+      <span class="promo-item"> | </span>
+      <span class="promo-item">Restaurant-Quality Results at Home</span>
+      <span class="promo-item"> | </span>
+      <span class="promo-item">2-Year Manufacturer Warranty</span>
+      <span class="promo-item"> | </span>
+      <span class="promo-item">Built for Home Chefs Who Demand More</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <div class="navbar-nav">
+          <a href="products.html" class="nav-link">Shop</a>
+          <a href="recipes.html" class="nav-link">Recipes</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="about.html" class="nav-link">Our Story</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+        </div>
+        <a href="index.html" class="navbar-brand"><img src="assets/images/home1_03.png" alt="OUNIN" class="logo-img"></a>
+        <div class="navbar-actions">
+          <button class="nav-btn" aria-label="Search" id="search-btn" onclick="window.location.href='search.html'">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z"/></svg>
+          </button>
+          <a href="account.html" class="nav-btn" aria-label="Account" id="account-btn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          </a>
+          <a href="javascript:void(0)" class="nav-btn cart-wrapper" aria-label="Cart" id="cart-btn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="cart-count" id="cart-count">0</span>
+          </a>
+          <button class="nav-btn mobile-menu-btn" aria-label="Menu" id="mobile-menu-btn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <span class="navbar-brand">OUNIN</span>
+      <button class="nav-btn" id="mobile-menu-close">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="products.html" class="mobile-nav-link">Shop</a>
+      <a href="recipes.html" class="mobile-nav-link">Recipes</a>
+      <a href="about.html" class="mobile-nav-link">Our Story</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div class="search-modal" id="search-modal">
+    <div class="search-modal-overlay" id="search-overlay"></div>
+    <button class="search-modal-close-wrapper search-close" id="search-close-top" aria-label="Close search">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <div class="search-modal-content">
+      <div class="search-input-wrapper">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z"/></svg>
+        <input type="text" class="search-input" placeholder="Search for products, recipes..." id="search-input">
+        <button class="search-close" id="search-close">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="search-results" id="search-results">
+        <p class="search-hint">Search for products, recipes, or anything else...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT HERO -->
+  <section style="min-height:70vh;background-color:var(--color-background);padding:80px 0;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1200px;margin:0 auto;">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;border-radius:16px;background:#e8dfd1;display:flex;align-items:center;justify-content:center;">
+            <img src="assets/images/product-4a.jpg" alt="Air Fryer Oven 12in" style="width:100%;height:100%;object-fit:cover;" id="main-product-img">
+          </div>
+          <div style="display:flex;gap:12px;">
+            <img src="assets/images/product-4a.jpg" alt="Main view" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid var(--color-primary);" onclick="switchMainImage(this)" data-src="assets/images/product-4a.jpg">
+            <img src="assets/images/product-4b.jpg" alt="Detail view" style="width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid transparent;" onclick="switchMainImage(this)" data-src="assets/images/product-4b.jpg">
+          </div>
+        </div>
+        <div>
+          <div style="display:inline-block;background:var(--color-primary);color:#fff;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:16px;">Hot</div>
+          <h1 style="font-family:var(--font-serif);font-size:42px;color:var(--color-secondary);margin:0 0 16px;line-height:1.2;">
+            Air Fryer Oven <span style="font-size:28px;color:var(--color-accent);">(12in)</span>
+          </h1>
+          <p style="font-size:18px;color:var(--color-text-light);margin:0 0 24px;">Steam Infusion - Compact - 6-in-1</p>
+          <div style="margin:0 0 24px;display:flex;align-items:baseline;gap:12px;">
+            <span style="font-size:36px;font-weight:700;color:var(--color-secondary);">$150</span>
+            <span style="font-size:18px;color:var(--color-text-light);text-decoration:line-through;">$299</span>
+            <span style="background:#d4a574;color:#fff;padding:4px 12px;border-radius:4px;font-size:13px;font-weight:600;">SAVE 50%</span>
+          </div>
+          <div style="margin-bottom:32px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span style="font-size:15px;color:var(--color-text);">Compact - Occupies only 0.1 sqm counter space</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span style="font-size:15px;color:var(--color-text);">6-in-1: Air Fry, Bake, Roast, Toast, Grill, Dehydrate</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span style="font-size:15px;color:var(--color-text);">Steam Injection - Adds moisture for better texture</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span style="font-size:15px;color:var(--color-text);">Fits 6 slices bread, 3lbs wings, 8-inch pizza, 4lb chicken</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span style="font-size:15px;color:var(--color-text);">Ultimate Breakfast Solution - toast, fry, grill together</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="width:100%;margin-bottom:12px;padding:16px;font-size:16px;background:#8B7355;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(139,115,85,0.3);" onclick="window.location.href='https://store.ouninshop.com/products/air-fryer-oven-12in'">Buy Now - $150</button>
+          <button class="btn btn-add-cart" style="width:100%;padding:16px;font-size:16px;background:#D4A574;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(212,165,116,0.3);" onclick="addToCart('elite-bundle','Air Fryer Oven (12in)',150)">Add to Cart</button>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S IN THE BOX -->
+  <section style="background-color:var(--color-bg-alt);padding:80px 0;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;">What's In The Box</h2>
+      <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;">Everything you need to start cooking professionally from day one.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:900px;margin:0 auto;">
+        <div style="text-align:center;background:var(--color-bg);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;">
+          <img src="assets/images/accessory-12in-tray.png" alt="Baking Tray" style="width:100%;max-width:180px;height:160px;object-fit:contain;margin-bottom:16px;">
+          <p style="font-weight:600;font-size:16px;color:var(--color-secondary);">Baking Tray</p>
+        </div>
+        <div style="text-align:center;background:var(--color-bg);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;">
+          <img src="assets/images/accessory-12in-basket.png" alt="Air Fry Basket" style="width:100%;max-width:180px;height:160px;object-fit:contain;margin-bottom:16px;">
+          <p style="font-weight:600;font-size:16px;color:var(--color-secondary);">Air Fry Basket</p>
+        </div>
+        <div style="text-align:center;background:var(--color-bg);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;">
+          <img src="assets/images/accessory-12in-gloves.png" alt="Oven Gloves" style="width:100%;max-width:180px;height:160px;object-fit:contain;margin-bottom:16px;">
+          <p style="font-weight:600;font-size:16px;color:var(--color-secondary);">Oven Gloves</p>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--color-text-light);margin-top:32px;font-size:14px;">Free included with your Air Fryer Oven</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section style="background-color:var(--color-bg);padding:80px 0;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;">Why Air Fryer Oven (12in)</h2>
+      <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto;">Air fryer oven integrates baking, frying, roasting, and more into one compact appliance. Combining the functions of multiple common kitchen devices, it is ideal for efficient and healthy cooking in small households.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
+          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">Versatile Cooking Functions</h3>
+          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Air fryer oven with steam infusion offers practical functions including air frying, baking, and dehydrating. All-in-one solution for your kitchen.</p>
+        </div>
+        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
+          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">Compact Design</h3>
+          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Deliver twice the cooking capacity of a standard air fryer. Occupy just 0.1 sqm counter space, fits 6 slices bread, 3lbs wings, 8-inch pizza, or 4lb whole chicken.</p>
+        </div>
+        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
+          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">Steam Injection Technology</h3>
+          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">With just 2 teaspoons of water, steam injection adds moisture during baking, revolutionizing your dishes with enhanced flavor, aroma, and texture.</p>
+        </div>
+        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
+          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">Ultimate Breakfast Solution</h3>
+          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Simplify your morning routine by toasting bread, frying eggs, and grilling meat simultaneously for a healthier, tastier, and more efficient breakfast.</p>
+        </div>
+        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
+          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">6-in-1 Multi-Function</h3>
+          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Air Fry, Bake, Roast, Toast, Grill, Dehydrate - all in one compact appliance. Replaces multiple kitchen devices.</p>
+        </div>
+        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
+          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">Healthier Cooking</h3>
+          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Steam injection technology means less oil needed. Enjoy crispy results with significantly less fat and calories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COOKING FUNCTIONS -->
+  <section style="background-color:var(--color-bg-alt);padding:80px 0;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;">6-in-1 Cooking Functions</h2>
+      <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto;">Air fry, bake, roast, toast, grill, and dehydrate - all in one compact appliance.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:600px;margin:0 auto;">
+        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
+          <span style="font-size:20px;font-weight:700;color:var(--color-primary);">AF</span><span style="font-weight:600;font-size:15px;">Air Fry</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
+          <span style="font-size:20px;font-weight:700;color:var(--color-primary);">BA</span><span style="font-weight:600;font-size:15px;">Bake</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
+          <span style="font-size:20px;font-weight:700;color:var(--color-primary);">RO</span><span style="font-weight:600;font-size:15px;">Roast</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
+          <span style="font-size:20px;font-weight:700;color:var(--color-primary);">TO</span><span style="font-weight:600;font-size:15px;">Toast</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
+          <span style="font-size:20px;font-weight:700;color:var(--color-primary);">GR</span><span style="font-weight:600;font-size:15px;">Grill</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
+          <span style="font-size:20px;font-weight:700;color:var(--color-primary);">DH</span><span style="font-weight:600;font-size:15px;">Dehydrate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section style="background-color:var(--color-bg);padding:80px 0;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;">Technical Specs</h2>
+      <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto;">Compact yet powerful - designed for modern home cooking.</p>
+      <div style="max-width:700px;margin:0 auto;">
+        <table style="width:100%;border-collapse:collapse;">
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
+              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);width:45%;">Capacity</td>
+              <td style="padding:16px 20px;color:var(--color-text);">12in - fits 1-2 people, 6 slices bread, 3lbs wings</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
+              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Cooking Functions</td>
+              <td style="padding:16px 20px;color:var(--color-text);">6-in-1: Air Fry, Bake, Roast, Toast, Grill, Dehydrate</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
+              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Steam Injection</td>
+              <td style="padding:16px 20px;color:var(--color-text);">2 teaspoons water for enhanced moisture</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
+              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Counter Space</td>
+              <td style="padding:16px 20px;color:var(--color-text);">Only 0.1 sqm (compact footprint)</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
+              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Dimensions</td>
+              <td style="padding:16px 20px;color:var(--color-text);">12"W x 11"D x 9"H</td>
+            </tr>
+            <tr>
+              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Warranty</td>
+              <td style="padding:16px 20px;color:var(--color-text);">2-Year Manufacturer Warranty</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2 class="newsletter-title">Join the Ounin Family</h2>
+        <p class="newsletter-text">Get exclusive recipes, cooking tips, and early access to new products.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-disclaimer">By subscribing, you agree to our Privacy Policy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand">OUNIN</a>
+          <p class="footer-tagline">An ode to the heart of the home</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ounin.kitchen/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61581936418504" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@OUNIN.Kitchen" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@ounin_uk" class="social-link" aria-label="TikTok" target="_blank" rel="noopener"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="product-pro-embedded.html">Steam Combi Oven (18in)</a></li>
+            <li><a href="product-compact.html">Steam Air Fry Oven (12L)</a></li>
+            <li><a href="product-mini.html">Steam Combi Oven (24in)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="shipping.html">Shipping</a></li>
+            <li><a href="returns.html">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-contact">
+            <li>+86 757 28996870</li>
+            <li>ouning_china@chinaouning.com</li>
+            <li>Foshan, Guangdong, China</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ounin. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Your Cart (<span id="cart-item-count">0</span>)</h3>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer-items" id="cart-items"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" onclick="goToShopifyCheckout()">Checkout</button>
+      <a href="products.html" class="cart-continue" id="continue-shopping">Continue Shopping</a>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
