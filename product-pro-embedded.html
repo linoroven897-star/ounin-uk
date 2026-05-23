@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="alternate" hreflang="en-us" href="https://ouninshop.com/">
+  <link rel="alternate" hreflang="en-gb" href="https://uk.ouninshop.com/">
+  <link rel="alternate" hreflang="x-default" href="https://ouninshop.com/">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Steam Combi Oven (18in) - 10-in-1 multi-function, 18qt family capacity, self-cleaning. $250 from $399.">
+  <meta name="description" content="Steam Combi Oven (18in) - 10-in-1 multi-function, 18qt family capacity, self-cleaning.">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -97,7 +101,7 @@
   </div>
 
   <!-- PRODUCT HERO -->
-  <section style="min-height:70vh;background-color:var(--color-background);padding:80px 0;">
+  <section style="min-height:70vh;background-color:var(--color-background);padding:80px 0;" data-product-id="pro-embedded">
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1200px;margin:0 auto;">
         <div style="display:flex;flex-direction:column;gap:16px;">
@@ -110,44 +114,17 @@
           </div>
         </div>
         <div>
-          <div style="display:inline-block;background:var(--color-primary);color:#fff;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:16px;">Bestseller</div>
-          <h1 style="font-family:var(--font-serif);font-size:42px;color:var(--color-secondary);margin:0 0 16px;line-height:1.2;">
-            Steam Combi Oven <span style="font-size:28px;color:var(--color-accent);">(18in)</span>
-          </h1>
-          <p style="font-size:18px;color:var(--color-text-light);margin:0 0 24px;">10-in-1 Multi-function - 18qt Family Size - Self-cleaning</p>
+          <div style="display:inline-block;background:var(--color-primary);color:#fff;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:16px;" id="display_badge"></div>
+          <h1 style="font-family:var(--font-serif);font-size:42px;color:var(--color-secondary);margin:0 0 16px;line-height:1.2;" id="display_name"></h1>
+          <p style="font-size:18px;color:var(--color-text-light);margin:0 0 24px;" id="display_short_description"></p>
           <div style="margin:0 0 24px;display:flex;align-items:baseline;gap:12px;">
-            <span style="font-size:36px;font-weight:700;color:var(--color-secondary);">$250</span>
-            <span style="font-size:18px;color:var(--color-text-light);text-decoration:line-through;">$399</span>
-            <span style="background:#d4a574;color:#fff;padding:4px 12px;border-radius:4px;font-size:13px;font-weight:600;">SAVE 37%</span>
+            <span style="font-size:36px;font-weight:700;color:var(--color-secondary);" id="display_price"></span>
+            <span style="font-size:18px;color:var(--color-text-light);text-decoration:line-through;" id="display_original_price"></span>
+            <span style="background:#d4a574;color:#fff;padding:4px 12px;border-radius:4px;font-size:13px;font-weight:600;" id="display_save_badge"></span>
           </div>
-          <div style="margin-bottom:32px;">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span style="font-size:15px;color:var(--color-text);">18qt Family Capacity (1-3 people)</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span style="font-size:15px;color:var(--color-text);">10-in-1: Steam, Bake, Grill, Air Fry, Combi...</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span style="font-size:15px;color:var(--color-text);">Steam + Crisp Technology</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span style="font-size:15px;color:var(--color-text);">20-Second Fast Steam Generation</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span style="font-size:15px;color:var(--color-text);">High-Temp Steam Self-Cleaning</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span style="font-size:15px;color:var(--color-text);">304 Stainless Steel Interior</span>
-            </div>
-          </div>
-          <button class="btn btn-primary" style="width:100%;margin-bottom:12px;padding:16px;font-size:16px;background:#8B7355;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(139,115,85,0.3);" onclick="window.location.href='https://store.ouninshop.com/products/ounin-pro-embedded?variant=53716550025580'">Buy Now - $250</button>
-          <button class="btn btn-add-cart" style="width:100%;padding:16px;font-size:16px;background:#D4A574;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(212,165,116,0.3);" onclick="addToCart('pro-embedded','Steam Combi Oven (18in)',250)">Add to Cart</button>
+          <div style="margin-bottom:32px;" id="display_features"></div>
+          <button class="btn btn-primary" style="width:100%;margin-bottom:12px;padding:16px;font-size:16px;background:#8B7355;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(139,115,85,0.3);" id="display_buy_btn" onclick="">Buy Now</button>
+          <button class="btn btn-add-cart" style="width:100%;padding:16px;font-size:16px;background:#D4A574;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(212,165,116,0.3);" id="display_cart_btn" onclick="">Add to Cart</button>
           
         </div>
       </div>
@@ -159,105 +136,26 @@
     <div class="container">
       <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;">What's In The Box</h2>
       <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;">Everything you need to start cooking professionally from day one.</p>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;max-width:1000px;margin:0 auto;">
-        <div style="text-align:center;background:var(--color-bg);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;">
-          <img src="assets/images/accessory-baking-tray.png" alt="Baking Tray" style="width:100%;max-width:180px;height:160px;object-fit:contain;margin-bottom:16px;">
-          <p style="font-weight:600;font-size:16px;color:var(--color-secondary);">Baking Tray</p>
-        </div>
-        <div style="text-align:center;background:var(--color-bg);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;">
-          <img src="assets/images/accessory-air-fry-basket.png" alt="Air Fry Basket" style="width:100%;max-width:180px;height:160px;object-fit:contain;margin-bottom:16px;">
-          <p style="font-weight:600;font-size:16px;color:var(--color-secondary);">Air Fry Basket</p>
-        </div>
-        <div style="text-align:center;background:var(--color-bg);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;">
-          <img src="assets/images/accessory-wire-rack.png" alt="Wire Rack" style="width:100%;max-width:180px;height:160px;object-fit:contain;margin-bottom:16px;">
-          <p style="font-weight:600;font-size:16px;color:var(--color-secondary);">Wire Rack</p>
-        </div>
-        <div style="text-align:center;background:var(--color-bg);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;">
-          <img src="assets/images/accessory-oven-gloves.png" alt="Oven Gloves" style="width:100%;max-width:180px;height:160px;object-fit:contain;margin-bottom:16px;">
-          <p style="font-weight:600;font-size:16px;color:var(--color-secondary);">Oven Gloves</p>
-        </div>
-      </div>
-      <p style="text-align:center;color:var(--color-text-light);margin-top:32px;font-size:14px;">Free included with your Steam Combi Oven</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;max-width:1000px;margin:0 auto;" id="display_accessories"></div>
+      <p style="text-align:center;color:var(--color-text-light);margin-top:32px;font-size:14px;">Free included with your <span id="display_product_name_badge"></span></p>
     </div>
   </section>
 
   <!-- FEATURES -->
   <section style="background-color:var(--color-bg);padding:80px 0;">
     <div class="container">
-      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;">Why Steam Combi Oven (18in)</h2>
-      <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto;">Integrated 10 cooking functions including steam, bake, air fry, combi and self-cleaning. Ideal for health-conscious families seeking professional results in a compact design.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
-        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
-          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
-          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">20-Second Fast Steam</h3>
-          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Efficient steam generation system produces steam in just 20 seconds. Professional-level moisture and browning in one seamless cycle.</p>
-        </div>
-        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
-          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
-          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">18qt Family Capacity</h3>
-          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Perfect for 1-3 people. Roasts a whole chicken or bakes two fresh fish simultaneously. Spacious yet compact.</p>
-        </div>
-        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
-          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">High-Temp Self-Clean</h3>
-          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">High-temperature steam softens stubborn stains. 304 stainless steel interior stays looking new for years.</p>
-        </div>
-        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
-          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
-          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">Steam + Crisp</h3>
-          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Achieve professional-level tenderness and crispness in one seamless cycle. Health-conscious cooking without compromising taste.</p>
-        </div>
-        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
-          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">Space-Saving Design</h3>
-          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Multiple functions integrated in one compact unit. Saves valuable countertop space while delivering professional results.</p>
-        </div>
-        <div style="background:var(--color-bg);border-radius:16px;padding:32px;text-align:center;">
-          <svg fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--color-secondary);">304 Stainless Steel</h3>
-          <p style="font-size:14px;color:var(--color-text-light);line-height:1.6;">Interior cavity made of 304 stainless steel for stable performance and lasting durability.</p>
-        </div>
-      </div>
+      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;" id="display_features_title"></h2>
+      <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto;" id="display_features_desc"></p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;" id="display_features_detail"></div>
     </div>
   </section>
 
   <!-- COOKING FUNCTIONS -->
   <section style="background-color:var(--color-bg-alt);padding:80px 0;">
     <div class="container">
-      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;">10-in-1 Cooking Functions</h2>
+      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:16px;" id="display_cooking_functions_title"></h2>
       <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto;">Steam, bake, grill, air fry, combi and more - all in one compact unit for professional-grade results.</p>
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:900px;margin:0 auto;">
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">ST</span><span style="font-weight:600;font-size:15px;">Steam</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">BA</span><span style="font-weight:600;font-size:15px;">Bake</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">GR</span><span style="font-weight:600;font-size:15px;">Grill</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">AF</span><span style="font-weight:600;font-size:15px;">Air Fry</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">CM</span><span style="font-weight:600;font-size:15px;">Combi</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">WB</span><span style="font-weight:600;font-size:15px;">Wet Bake</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">SR</span><span style="font-weight:600;font-size:15px;">Steam Roast</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">BR</span><span style="font-weight:600;font-size:15px;">Broil</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">RH</span><span style="font-weight:600;font-size:15px;">Reheat</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--color-bg);border-radius:12px;padding:16px 20px;">
-          <span style="font-size:24px;">SC</span><span style="font-weight:600;font-size:15px;">Self-Clean</span>
-        </div>
-      </div>
+      <div style="display:grid;gap:16px;max-width:900px;margin:0 auto;" id="display_cooking_functions"></div>
     </div>
   </section>
 
@@ -268,44 +166,7 @@
       <p style="text-align:center;color:var(--color-text-light);margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto;">Precision engineering meets family-friendly design for lasting performance.</p>
       <div style="max-width:700px;margin:0 auto;">
         <table style="width:100%;border-collapse:collapse;">
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);width:45%;">Capacity</td>
-              <td style="padding:16px 20px;color:var(--color-text);">18 qt (18L) - fits 1-3 people</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Cooking Functions</td>
-              <td style="padding:16px 20px;color:var(--color-text);">10-in-1: Steam, Bake, Grill, Air Fry, Combi, Wet Bake, Steam Roast, Broil, Reheat, Self-Clean</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Temperature Range</td>
-              <td style="padding:16px 20px;color:var(--color-text);">150F - 450F (65C - 230C)</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Steam Generation</td>
-              <td style="padding:16px 20px;color:var(--color-text);">20-second fast steam</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Interior Material</td>
-              <td style="padding:16px 20px;color:var(--color-text);">304 Stainless Steel</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Control Panel</td>
-              <td style="padding:16px 20px;color:var(--color-text);">Knob + LED Touch Display</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Dimensions</td>
-              <td style="padding:16px 20px;color:var(--color-text);">18"W x 15"D x 13"H</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Net Weight</td>
-              <td style="padding:16px 20px;color:var(--color-text);">22 lbs (10 kg)</td>
-            </tr>
-            <tr>
-              <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);">Warranty</td>
-              <td style="padding:16px 20px;color:var(--color-text);">2-Year Manufacturer Warranty</td>
-            </tr>
-          </tbody>
+          <tbody id="display_specs"></tbody>
         </table>
       </div>
     </div>
@@ -400,5 +261,115 @@
   <div class="cart-overlay" id="cart-overlay"></div>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // 获取当前页面产品ID
+    const productSection = document.querySelector('[data-product-id]');
+    const productId = productSection ? productSection.getAttribute('data-product-id') : '';
+
+    // 加载产品JSON数据
+    fetch('/data/products.json')
+      .then(response => response.json())
+      .then(data => {
+        // 找到对应产品
+        const product = data.products.find(p => p.id === productId);
+        if (!product) {
+          console.error('产品未找到:', productId);
+          return;
+        }
+
+        // 填充基本信息
+        if (document.getElementById('display_badge')) {
+          document.getElementById('display_badge').innerText = product.badge;
+        }
+        if (document.getElementById('display_name')) {
+          document.getElementById('display_name').innerText = product.product_name;
+        }
+        if (document.getElementById('display_short_description')) {
+          document.getElementById('display_short_description').innerText = product.short_description;
+        }
+        if (document.getElementById('display_price')) {
+          document.getElementById('display_price').innerText = product.price;
+        }
+        if (document.getElementById('display_original_price')) {
+          document.getElementById('display_original_price').innerText = product.original_price;
+        }
+        if (document.getElementById('display_save_badge')) {
+          const original = parseFloat(product.original_price.replace(/[^0-9.]/g, ''));
+          const current = parseFloat(product.price.replace(/[^0-9.]/g, ''));
+          const savePercent = Math.round((1 - current / original) * 100);
+          document.getElementById('display_save_badge').innerText = 'SAVE ' + savePercent + '%';
+        }
+        if (document.getElementById('display_buy_btn')) {
+          document.getElementById('display_buy_btn').innerText = 'Buy Now - ' + product.price;
+          document.getElementById('display_buy_btn').onclick = function() {
+            window.location.href = product.buy_link;
+          };
+        }
+        if (document.getElementById('display_cart_btn')) {
+          const priceNum = parseFloat(product.price.replace(/[^0-9.]/g, ''));
+          document.getElementById('display_cart_btn').innerText = 'Add to Cart';
+          document.getElementById('display_cart_btn').onclick = function() {
+            addToCart(product.id, product.product_name, priceNum);
+          };
+        }
+        if (document.getElementById('display_product_name_badge')) {
+          document.getElementById('display_product_name_badge').innerText = product.product_name;
+        }
+
+        // 填充特性列表
+        const featuresContainer = document.getElementById('display_features');
+        if (featuresContainer && product.features) {
+          featuresContainer.innerHTML = product.features.map(f => `
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" style="color:var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span style="font-size:15px;color:var(--color-text);">${f}</span>
+            </div>
+          `).join('');
+        }
+
+        // 填充配件
+        const accessoriesContainer = document.getElementById('display_accessories');
+        if (accessoriesContainer && product.accessories) {
+          accessoriesContainer.style.gridTemplateColumns = 'repeat(' + Math.min(product.accessories.length, 4) + ', 1fr)';
+          accessoriesContainer.innerHTML = product.accessories.map(a => `
+            <div style="text-align:center;background:var(--color-bg);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;">
+              <img src="${a.image}" alt="${a.name}" style="width:100%;max-width:180px;height:160px;object-fit:contain;margin-bottom:16px;">
+              <p style="font-weight:600;font-size:16px;color:var(--color-secondary);">${a.name}</p>
+            </div>
+          `).join('');
+        }
+
+        // 填充规格表
+        const specsContainer = document.getElementById('display_specs');
+        if (specsContainer) {
+          const specsMap = {
+            'Capacity': product.capacity,
+            'Cooking Functions': product.cooking_functions,
+            'Temperature Range': product.temperature_range,
+            'Steam Generation': product.steam_generation,
+            'Interior Material': product.interior_material,
+            'Control Panel': product.control_panel,
+            'Dimensions': product.dimensions,
+            'Net Weight': product.net_weight,
+            'Warranty': product.warranty,
+            'Voltage': product.voltage,
+            'Plug Type': product.plug_type
+          };
+          specsContainer.innerHTML = Object.entries(specsMap)
+            .filter(([_, value]) => value)
+            .map(([key, value]) => `
+              <tr style="border-bottom:1px solid rgba(139,115,85,0.15);">
+                <td style="padding:16px 20px;font-weight:600;color:var(--color-secondary);width:45%;">${key}</td>
+                <td style="padding:16px 20px;color:var(--color-text);">${value}</td>
+              </tr>
+            `).join('');
+        }
+
+        // 更新meta description
+        document.querySelector('meta[name="description"]').setAttribute('content', product.product_name + ' - ' + product.short_description + '. ' + product.price);
+
+      })
+      .catch(error => console.error('数据加载失败:', error));
+  </script>
 </body>
 </html>

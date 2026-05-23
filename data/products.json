@@ -1,0 +1,160 @@
+{
+  "products": [
+    {
+      "id": "pro-embedded",
+      "product_name": "OUNIN 18in Steam Combi Oven",
+      "price": "£249",
+      "original_price": "£399",
+      "badge": "Bestseller",
+      "short_description": "10-in-1 Multi-function - 18qt Family Size - Self-cleaning",
+      "voltage": "230V-240V",
+      "plug_type": "UK Standard 3-pin plug",
+      "capacity": "18 qt (18L)",
+      "dimensions": "457 x 381 x 330 mm",
+      "net_weight": "22 lbs (10 kg)",
+      "cooking_functions": "10-in-1: Steam, Bake, Grill, Air Fry, Combi, Wet Bake, Steam Roast, Broil, Reheat, Self-Clean",
+      "temperature_range": "150°F - 450°F (65°C - 230°C)",
+      "steam_generation": "20-second fast steam",
+      "interior_material": "304 Stainless Steel",
+      "control_panel": "Knob + LED Touch Display",
+      "warranty": "2-Year Manufacturer Warranty",
+      "shipping_info": "Free standard shipping across the UK. Dispatched from local warehouse.",
+      "return_policy": "30-day money-back guarantee. Professional local customer support.",
+      "features": [
+        "18qt Family Capacity (1-3 people)",
+        "10-in-1: Steam, Bake, Grill, Air Fry, Combi...",
+        "Steam + Crisp Technology",
+        "20-Second Fast Steam Generation",
+        "High-Temp Steam Self-Cleaning",
+        "304 Stainless Steel Interior"
+      ],
+      "accessories": [
+        { "name": "Baking Tray", "image": "assets/images/accessory-baking-tray.png" },
+        { "name": "Air Fry Basket", "image": "assets/images/accessory-air-fry-basket.png" },
+        { "name": "Wire Rack", "image": "assets/images/accessory-wire-rack.png" },
+        { "name": "Oven Gloves", "image": "assets/images/accessory-oven-gloves.png" }
+      ],
+      "images": [
+        "assets/images/product-1a.jpg",
+        "assets/images/product-1b.jpg"
+      ],
+      "buy_link": "https://store.ouninshop.com/products/ounin-pro-embedded?variant=53716550025580",
+      "shopify_variant_id": "53716550025580"
+    },
+    {
+      "id": "compact",
+      "product_name": "OUNIN 12L Steam Air Fry Oven",
+      "price": "£249",
+      "original_price": "£429",
+      "badge": "New",
+      "short_description": "Steam & Crisp - 12L Capacity - 8-in-1",
+      "voltage": "230V-240V",
+      "plug_type": "UK Standard 3-pin plug",
+      "capacity": "12L",
+      "dimensions": "381 x 330 x 279 mm",
+      "cooking_functions": "8-in-1: Steam, Bake, Grill, Air Fry, Combi, Wet Bake, Steam Roast, Self-Clean",
+      "temperature_range": "150°F - 450°F (65°C - 230°C)",
+      "steam_generation": "20-second fast steam",
+      "interior_material": "304 Stainless Steel",
+      "warranty": "2-Year Manufacturer Warranty",
+      "shipping_info": "Free standard shipping across the UK. Dispatched from local warehouse.",
+      "return_policy": "30-day money-back guarantee. Professional local customer support.",
+      "features": [
+        "12L Capacity - Perfect for 1-2 people",
+        "8-in-1: Steam, Bake, Grill, Air Fry, Combi...",
+        "Steam & Crisp Technology",
+        "20-Second Fast Steam Generation",
+        "High-Temp Steam Self-Cleaning"
+      ],
+      "accessories": [
+        { "name": "Baking Tray", "image": "assets/images/accessory-12l-tray.png" },
+        { "name": "Air Fry Basket", "image": "assets/images/accessory-12l-basket.png" },
+        { "name": "Oven Gloves", "image": "assets/images/accessory-12l-gloves.png" }
+      ],
+      "images": [
+        "assets/images/product-2a.jpg",
+        "assets/images/product-2b.jpg"
+      ],
+      "buy_link": "https://store.ouninshop.com/products/steam-air-fry-oven",
+      "shopify_variant_id": ""
+    },
+    {
+      "id": "mini",
+      "product_name": "OUNIN 24in Steam Combi Oven",
+      "price": "£309",
+      "original_price": "£699",
+      "badge": "Bestseller",
+      "short_description": "XL Family Size - 25.4QT - 11-in-1",
+      "voltage": "230V-240V",
+      "plug_type": "UK Standard 3-pin plug",
+      "capacity": "25.4QT (24L)",
+      "dimensions": "",
+      "net_weight": "",
+      "cooking_functions": "11-in-1: Steam, Bake, Grill, Air Fry, Combi, Stew, Wet Bake, Steam Roast, Broil, Reheat, Self-Clean, Dehydrate",
+      "temperature_range": "150°F - 450°F (65°C - 230°C)",
+      "interior_material": "304 Stainless Steel",
+      "control_panel": "Knob + LED Touch Display",
+      "warranty": "2-Year Manufacturer Warranty",
+      "shipping_info": "Free standard shipping across the UK. Dispatched from local warehouse.",
+      "return_policy": "30-day money-back guarantee. Professional local customer support.",
+      "features": [
+        "25.4QT XL Family Capacity (fits whole chicken)",
+        "11-in-1: Steam, Bake, Grill, Air Fry, Combi...",
+        "Combined Steam & Bake for juicy inside, crispy outside",
+        "High-Temp Steam Self-Cleaning",
+        "304 Stainless Steel Interior"
+      ],
+      "accessories": [
+        { "name": "Baking Tray", "image": "assets/images/accessory-24l-tray.png" },
+        { "name": "Air Fry Basket", "image": "assets/images/accessory-24l-basket.png" },
+        { "name": "Wire Rack", "image": "assets/images/accessory-24l-rack.png" },
+        { "name": "Rotisserie", "image": "assets/images/accessory-24l-rotisserie.png" },
+        { "name": "Roast Fork", "image": "assets/images/accessory-24l-fork.png" },
+        { "name": "Rack Net", "image": "assets/images/accessory-24l-rack-net.png" },
+        { "name": "Oven Gloves", "image": "assets/images/accessory-24l-gloves.png" }
+      ],
+      "images": [
+        "assets/images/product-3a.jpg",
+        "assets/images/product-3b.jpg"
+      ],
+      "buy_link": "https://store.ouninshop.com/products/steam-combi-oven-24in",
+      "shopify_variant_id": ""
+    },
+    {
+      "id": "elite-bundle",
+      "product_name": "OUNIN 12in Air Fryer Oven",
+      "price": "£149",
+      "original_price": "£299",
+      "badge": "Hot",
+      "short_description": "Steam Infusion - Compact - 6-in-1",
+      "voltage": "230V-240V",
+      "plug_type": "UK Standard 3-pin plug",
+      "capacity": "12in - fits 1-2 people, 6 slices bread, 3lbs wings",
+      "dimensions": "305 x 279 x 229 mm",
+      "cooking_functions": "6-in-1: Air Fry, Bake, Roast, Toast, Grill, Dehydrate",
+      "steam_injection": "2 teaspoons water for enhanced moisture",
+      "counter_space": "Only 0.1 sqm (compact footprint)",
+      "warranty": "2-Year Manufacturer Warranty",
+      "shipping_info": "Free standard shipping across the UK. Dispatched from local warehouse.",
+      "return_policy": "30-day money-back guarantee. Professional local customer support.",
+      "features": [
+        "Compact - Occupies only 0.1 sqm counter space",
+        "6-in-1: Air Fry, Bake, Roast, Toast, Grill, Dehydrate",
+        "Steam Injection - Adds moisture for better texture",
+        "Fits 6 slices bread, 3lbs wings, 8-inch pizza, 4lb chicken",
+        "Ultimate Breakfast Solution - toast, fry, grill together"
+      ],
+      "accessories": [
+        { "name": "Baking Tray", "image": "assets/images/accessory-12in-tray.png" },
+        { "name": "Air Fry Basket", "image": "assets/images/accessory-12in-basket.png" },
+        { "name": "Oven Gloves", "image": "assets/images/accessory-12in-gloves.png" }
+      ],
+      "images": [
+        "assets/images/product-4a.jpg",
+        "assets/images/product-4b.jpg"
+      ],
+      "buy_link": "https://store.ouninshop.com/products/air-fryer-oven-12in",
+      "shopify_variant_id": ""
+    }
+  ]
+}
