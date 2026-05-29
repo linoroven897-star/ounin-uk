@@ -969,9 +969,9 @@
                 </div>
                 <div class="benefit-text">
                   <div class="benefit-name">Free Express Shipping</div>
-                  <div class="benefit-desc">On orders over $99</div>
+                  <div class="benefit-desc">On orders over £99</div>
                 </div>
-                <div class="benefit-progress">$99+</div>
+                <div class="benefit-progress">£99+</div>
               </div>
               <div class="benefit-item">
                 <div class="benefit-icon">
@@ -1035,7 +1035,7 @@
             </div>
             <div class="benefit-text">
               <div class="benefit-name">Make a Purchase</div>
-              <div class="benefit-desc">Earn 1 point per $1 spent</div>
+              <div class="benefit-desc">Earn 1 point per £1 spent</div>
             </div>
           </div>
           <div class="benefit-item">
@@ -1244,7 +1244,7 @@
     <div class="cart-drawer-footer" id="cart-footer">
       <div class="cart-subtotal">
         <span>Subtotal</span>
-        <span id="cart-subtotal">$0</span>
+        <span id="cart-subtotal">£0</span>
       </div>
       <p class="cart-shipping-note">Shipping & taxes calculated at checkout</p>
       <button class="btn btn-primary btn-checkout" id="checkout-btn">Checkout</button>
@@ -1523,7 +1523,7 @@
               ordersHtml += '<div style="display:flex;justify-content:space-between;margin-bottom:8px;">';
               ordersHtml += '<span style="font-weight:600;">Order #' + order.id + '</span>';
               ordersHtml += '<span style="color:#666;">' + (order.date || '') + '</span></div>';
-              ordersHtml += '<div style="color:#666;font-size:14px;">' + (order.items || '') + ' &bull; $' + (order.total || 0) + '</div>';
+              ordersHtml += '<div style="color:#666;font-size:14px;">' + (order.items || '') + ' &bull; £' + (order.total || 0) + '</div>';
               ordersHtml += '</div>';
             });
             ordersList.innerHTML = ordersHtml;
@@ -1541,7 +1541,7 @@
               wishlistHtml += '<img src="' + (item.image || 'assets/images/placeholder.jpg') + '" alt="' + (item.name || '') + '" style="width:100%;height:180px;object-fit:cover;">';
               wishlistHtml += '<div style="padding:16px;">';
               wishlistHtml += '<h3 style="font-size:14px;margin:0 0 8px;">' + (item.name || '') + '</h3>';
-              wishlistHtml += '<p style="color:#666;font-size:14px;margin:0 0 12px;">$' + (item.price || 0) + '</p>';
+              wishlistHtml += '<p style="color:#666;font-size:14px;margin:0 0 12px;">£' + (item.price || 0) + '</p>';
               wishlistHtml += '<button class="btn btn-outline" onclick="removeFromWishlist(\'' + (item.name || '').replace(/'/g, "\\'") + '\');location.reload();" style="width:100%;padding:8px;font-size:13px;">Remove</button>';
               wishlistHtml += '</div></div>';
             });
@@ -1574,7 +1574,7 @@
               ordersHtml += '<div style="display:flex;justify-content:space-between;margin-bottom:8px;">';
               ordersHtml += '<span style="font-weight:600;">Order #' + order.id + '</span>';
               ordersHtml += '<span style="color:#666;">' + order.date + '</span></div>';
-              ordersHtml += '<div style="color:#666;font-size:14px;">' + order.items + ' &bull; $' + order.total + '</div>';
+              ordersHtml += '<div style="color:#666;font-size:14px;">' + order.items + ' &bull; £' + order.total + '</div>';
               ordersHtml += '</div>';
             });
             ordersList.innerHTML = ordersHtml;
@@ -1593,7 +1593,7 @@
               wishlistHtml += '<img src="' + (item.image || 'assets/images/placeholder.jpg') + '" alt="' + item.name + '" style="width:100%;height:180px;object-fit:cover;">';
               wishlistHtml += '<div style="padding:16px;">';
               wishlistHtml += '<h3 style="font-size:14px;margin:0 0 8px;">' + item.name + '</h3>';
-              wishlistHtml += '<p style="color:#666;font-size:14px;margin:0 0 12px;">$' + (item.price || 0) + '</p>';
+              wishlistHtml += '<p style="color:#666;font-size:14px;margin:0 0 12px;">£' + (item.price || 0) + '</p>';
               wishlistHtml += '<button class="btn btn-outline" onclick="removeFromWishlist(\'' + item.name + '\');location.reload();" style="width:100%;padding:8px;font-size:13px;">Remove</button>';
               wishlistHtml += '</div></div>';
             });
