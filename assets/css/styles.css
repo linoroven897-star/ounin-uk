@@ -1180,10 +1180,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
 }
 
-.img-card:nth-child(1) { transform: translateZ(0px)   rotateZ(0deg);    z-index: 4; }
-.img-card:nth-child(2) { transform: translateZ(-18px)  rotateZ(2.5deg);  z-index: 3; top: 6px; height: calc(100% - 6px); }
-.img-card:nth-child(3) { transform: translateZ(-36px)  rotateZ(5deg);    z-index: 2; top: 12px; height: calc(100% - 12px); }
-.img-card:nth-child(4) { transform: translateZ(-54px)  rotateZ(7.5deg);   z-index: 1; top: 18px; height: calc(100% - 12px); }
+.img-card:nth-child(1) { transform: translateZ(0px) translateX(0px);     z-index: 4; }
+.img-card:nth-child(2) { transform: translateZ(-15px) translateX(6px);  z-index: 3; }
+.img-card:nth-child(3) { transform: translateZ(-30px) translateX(12px); z-index: 2; }
+.img-card:nth-child(4) { transform: translateZ(-45px) translateX(18px); z-index: 1; }
 
 .img-card.active-card {
   transform: translateZ(60px) rotateY(-30deg) rotateZ(-5deg);
