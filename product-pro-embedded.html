@@ -143,7 +143,7 @@
   </section>
 
   <!-- PRODUCT DETAIL SHOWCASE -->
-  <section style="background-color:var(--color-surface);padding:80px 0;">
+  <section style="background-color:var(--color-background);padding:80px 0;">
     <div class="container">
       <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:48px;">Product Details</h2>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto;">
@@ -160,7 +160,7 @@
   </section>
 
   <!-- PRODUCT DETAIL SHOWCASE -->
-  <section style="background-color:var(--color-surface);padding:80px 0;">
+  <section style="background-color:var(--color-background);padding:80px 0;">
     <div class="container">
       <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:48px;">Product Details</h2>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1300px;margin:0 auto;">
@@ -195,7 +195,7 @@
   </section>
 
   <!-- PRODUCT DETAIL SHOWCASE -->
-  <section style="background-color:var(--color-surface);padding:80px 0;">
+  <section style="background-color:var(--color-background);padding:80px 0;">
     <div class="container">
       <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:48px;">Product Details</h2>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto;">
@@ -325,7 +325,7 @@
         // 找到对应产品
         const product = data.products.find(p => p.id === productId);
         if (!product) {
-          console.error('产品未找�?', productId);
+          console.error('产品未找�?', productId);
           return;
         }
 
@@ -368,7 +368,7 @@
           document.getElementById('display_product_name_badge').innerText = product.product_name;
         }
 
-        // 填充特性列�?
+        // 填充特性列�?
         const featuresContainer = document.getElementById('display_features');
         if (featuresContainer && product.features) {
           featuresContainer.innerHTML = product.features.map(f => `
@@ -391,7 +391,7 @@
           `).join('');
         }
 
-        // 填充规格�?
+        // 填充规格�?
         const specsContainer = document.getElementById('display_specs');
         if (specsContainer) {
           const specsMap = {

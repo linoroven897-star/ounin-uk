@@ -142,7 +142,7 @@
   </section>
 
   <!-- PRODUCT DETAIL SHOWCASE -->
-  <section style="background-color:var(--color-surface);padding:80px 0;">
+  <section style="background-color:var(--color-background);padding:80px 0;">
     <div class="container">
       <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:48px;">Product Details</h2>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;margin:0 auto;">
@@ -282,7 +282,7 @@
       .then(data => {
         const product = data.products.find(p => p.id === productId);
         if (!product) {
-          console.error('产品未找到:', productId);
+          console.error('产品未找�?', productId);
           return;
         }
 
