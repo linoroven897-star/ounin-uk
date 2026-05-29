@@ -1186,14 +1186,14 @@ h1, h2, h3, h4, h5, h6 {
 .img-card:nth-child(4) { transform: translateZ(-45px) translateX(18px); z-index: 1; }
 
 .img-card.active-card {
-  transform: translateZ(60px) rotateY(-30deg) rotateZ(-5deg);
+  transform: translateZ(45px);
   opacity: 1;
   z-index: 10;
   cursor: pointer;
 }
 
 .img-card.exit-card {
-  transform: translateZ(-80px) rotateY(-60deg) rotateZ(-10deg);
+  transform: translateZ(-60px);
   opacity: 0;
 }
 
