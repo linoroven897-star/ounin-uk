@@ -142,6 +142,40 @@
     </div>
   </section>
 
+  <!-- PRODUCT DETAIL SHOWCASE -->
+  <section style="background-color:var(--color-surface);padding:80px 0;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:48px;">Product Details</h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto;">
+        <img src="assets/images/detail-1.jpg" alt="Detail 1" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-2.jpg" alt="Detail 2" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-3.jpg" alt="Detail 3" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-4.jpg" alt="Detail 4" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-5.jpg" alt="Detail 5" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-6.jpg" alt="Detail 6" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-7.jpg" alt="Detail 7" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-8.jpg" alt="Detail 8" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT DETAIL SHOWCASE -->
+  <section style="background-color:var(--color-surface);padding:80px 0;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:32px;font-weight:700;color:var(--color-secondary);margin-bottom:48px;">Product Details</h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto;">
+        <img src="assets/images/detail-1.jpg" alt="Detail 1" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-2.jpg" alt="Detail 2" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-3.jpg" alt="Detail 3" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-4.jpg" alt="Detail 4" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-5.jpg" alt="Detail 5" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-6.jpg" alt="Detail 6" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-7.jpg" alt="Detail 7" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+        <img src="assets/images/detail-8.jpg" alt="Detail 8" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;">
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURES -->
   <section style="background-color:var(--color-bg);padding:80px 0;">
     <div class="container">
@@ -291,7 +325,7 @@
         // 找到对应产品
         const product = data.products.find(p => p.id === productId);
         if (!product) {
-          console.error('产品未找到:', productId);
+          console.error('产品未找�?', productId);
           return;
         }
 
@@ -334,7 +368,7 @@
           document.getElementById('display_product_name_badge').innerText = product.product_name;
         }
 
-        // 填充特性列表
+        // 填充特性列�?
         const featuresContainer = document.getElementById('display_features');
         if (featuresContainer && product.features) {
           featuresContainer.innerHTML = product.features.map(f => `
@@ -357,7 +391,7 @@
           `).join('');
         }
 
-        // 填充规格表
+        // 填充规格�?
         const specsContainer = document.getElementById('display_specs');
         if (specsContainer) {
           const specsMap = {
