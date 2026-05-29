@@ -55,7 +55,7 @@
     'pro-embedded': {
       id: 'pro-embedded',
       name: 'Steam Combi Oven (18in)',
-      price: 250,
+      price: 229,
       originalPrice: 399,
       image: 'assets/images/product-1a.jpg',
       imageHover: 'assets/images/product-1b.jpg',
@@ -66,7 +66,7 @@
     'compact': {
       id: 'compact',
       name: 'Steam Air Fry Oven (12L)',
-      price: 250,
+      price: 169,
       originalPrice: 429,
       image: 'assets/images/product-2a.jpg',
       imageHover: 'assets/images/product-2b.jpg',
@@ -77,7 +77,7 @@
     'mini': {
       id: 'mini',
       name: 'Steam Combi Oven (24in)',
-      price: 309,
+      price: 279,
       originalPrice: 699,
       image: 'assets/images/product-3a.jpg',
       imageHover: 'assets/images/product-3b.jpg',
@@ -88,7 +88,7 @@
     'elite-bundle': {
       id: 'elite-bundle',
       name: 'Air Fryer Oven (12in)',
-      price: 150,
+      price: 129,
       originalPrice: 299,
       image: 'assets/images/product-4a.jpg',
       imageHover: 'assets/images/product-4b.jpg',

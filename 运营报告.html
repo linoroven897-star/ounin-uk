@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="alternate" hreflang="en-us" href="https://ouninshop.com/">
+  <link rel="alternate" hreflang="en-gb" href="https://uk.ouninshop.com/">
+  <link rel="alternate" hreflang="x-default" href="https://ouninshop.com/">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUNIN 独立站运营报�?/title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.slide {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  page-break-after: always;
+  border-bottom: 2px solid #333;
+}
+
+.slide:nth-child(odd) { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+.slide:nth-child(even) { background: linear-gradient(135deg, #16213e 0%, #0f3460 100%); }
+
+/* Slide number */
+.slide::after {
+  content: attr(data-slide);
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  font-size: 16px;
+  color: rgba(255,255,255,0.4);
+}
+
+h1 { font-size: 56px; font-weight: 700; margin-bottom: 40px; color: #D4A574; }
+h2 { font-size: 42px; font-weight: 600; margin-bottom: 30px; color: #D4A574; }
+h3 { font-size: 28px; font-weight: 600; margin-bottom: 20px; color: #fff; }
+
+.subtitle { font-size: 28px; color: #aaa; margin-bottom: 20px; }
+.section { font-size: 20px; color: #888; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card h4 { font-size: 20px; color: #D4A574; margin-bottom: 15px; }
+.card p, .card li { font-size: 16px; color: #ccc; line-height: 1.8; }
+.card ul { list-style: none; padding: 0; }
+.card li { padding: 6px 0; }
+.card li::before { content: "�?"; color: #D4A574; }
+
+.highlight { color: #D4A574; font-weight: 600; }
+.big-num { font-size: 64px; font-weight: 700; color: #D4A574; }
+
+.row { display: flex; align-items: center; gap: 40px; margin-bottom: 30px; }
+.row-icon { width: 60px; height: 60px; background: #D4A574; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; }
+.row-content h4 { font-size: 22px; margin-bottom: 8px; }
+.row-content p { font-size: 16px; color: #aaa; }
+
+.timeline { border-left: 2px solid #D4A574; padding-left: 30px; margin-left: 20px; }
+.timeline-item { position: relative; margin-bottom: 30px; }
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: #D4A574;
+  border-radius: 50%;
+}
+.timeline-item h4 { font-size: 20px; color: #fff; margin-bottom: 8px; }
+.timeline-item p { font-size: 15px; color: #aaa; }
+
+.status-ok { color: #4ade80; }
+.status-warn { color: #fbbf24; }
+.status-bad { color: #f87171; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { padding: 14px 20px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+th { color: #D4A574; font-size: 16px; font-weight: 600; }
+td { font-size: 15px; color: #ccc; }
+tr:hover { background: rgba(255,255,255,0.03); }
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.tag-green { background: rgba(74,222,128,0.15); color: #4ade80; }
+.tag-yellow { background: rgba(251,191,36,0.15); color: #fbbf24; }
+.tag-blue { background: rgba(96,165,250,0.15); color: #60a5fa; }
+.tag-purple { background: rgba(192,132,252,0.15); color: #c084fc; }
+
+.btn-slide {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #D4A574;
+  color: #1a1a2e;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.cover { text-align: center; justify-content: center; align-items: center; }
+.cover h1 { font-size: 80px; margin-bottom: 20px; }
+.cover .subtitle { font-size: 32px; }
+.cover .date { font-size: 18px; color: #666; margin-top: 40px; }
+
+.logo-big {
+  font-size: 120px;
+  font-weight: 700;
+  color: #D4A574;
+  margin-bottom: 30px;
+  letter-spacing: 8px;
+}
+
+.icon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 30px; }
+.icon-item { text-align: center; }
+.icon-item .icon { font-size: 48px; margin-bottom: 15px; }
+.icon-item p { font-size: 14px; color: #aaa; }
+
+.colors { display: flex; gap: 30px; align-items: center; margin-top: 20px; }
+.color-swatch { width: 80px; height: 80px; border-radius: 12px; }
+.color-swatch p { font-size: 13px; color: #aaa; margin-top: 8px; text-align: center; }
+
+.metric-box {
+  background: rgba(212,165,116,0.1);
+  border: 1px solid rgba(212,165,116,0.3);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+.metric-box .num { font-size: 42px; font-weight: 700; color: #D4A574; }
+.metric-box .label { font-size: 14px; color: #aaa; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Cover -->
+<div class="slide cover" data-slide="01">
+  <div class="logo-big">OUNIN</div>
+  <h1>独立站运营报�?/h1>
+  <p class="subtitle">Steam Oven E-commerce Platform</p>
+  <p class="date">2026�?�?1�?/p>
+</div>
+
+<!-- Slide 2: Agenda -->
+<div class="slide" data-slide="02">
+  <p class="section">Overview</p>
+  <h2>报告大纲</h2>
+  <div class="grid-4" style="margin-top: 40px;">
+    <div class="card">
+      <h4>01</h4>
+      <p>品牌与公司简�?/p>
+    </div>
+    <div class="card">
+      <h4>02</h4>
+      <p>网站技术架�?/p>
+    </div>
+    <div class="card">
+      <h4>03</h4>
+      <p>产品线概�?/p>
+    </div>
+    <div class="card">
+      <h4>04</h4>
+      <p>已完成运营工�?/p>
+    </div>
+  </div>
+  <div class="grid-4" style="margin-top: 20px;">
+    <div class="card">
+      <h4>05</h4>
+      <p>技术问题与修复</p>
+    </div>
+    <div class="card">
+      <h4>06</h4>
+      <p>当前待处理事�?/p>
+    </div>
+    <div class="card">
+      <h4>07</h4>
+      <p>未来规划</p>
+    </div>
+    <div class="card">
+      <h4>08</h4>
+      <p>总结</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 3: Company Brand -->
+<div class="slide" data-slide="03">
+  <p class="section">Brand</p>
+  <h2>品牌与公司简�?/h2>
+  <div class="grid-2" style="margin-top: 40px;">
+    <div>
+      <h3 style="color:#D4A574;">关于我们</h3>
+      <ul style="font-size:18px;color:#ccc;line-height:2;list-style:none;margin-top:20px;">
+        <li>�?品牌名称：OUNIN（欧宁）</li>
+        <li>�?定位：高端蒸汽烤�?蒸烤一体机品牌</li>
+        <li>�?目标市场：全球（出海电商�?/li>
+        <li>�?主营产品：Steam Combi Oven 系列</li>
+        <li>�?总部：中国佛山顺�?/li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:#D4A574;">品牌优势</h3>
+      <ul style="font-size:18px;color:#ccc;line-height:2;list-style:none;margin-top:20px;">
+        <li>�?10-in-1 多功能烹�?/li>
+        <li>�?精准温控蒸汽技�?/li>
+        <li>�?自清洁功�?/li>
+        <li>�?专业烘焙级品�?/li>
+        <li>�?性价比优势（对比欧美品牌�?/li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:40px;">
+    <span class="tag tag-blue">B2C</span>
+    <span class="tag tag-purple">E-commerce</span>
+    <span class="tag tag-green">Global Market</span>
+    <span class="tag tag-yellow">Home Appliance</span>
+  </div>
+</div>
+
+<!-- Slide 4: Technical Architecture -->
+<div class="slide" data-slide="04">
+  <p class="section">Architecture</p>
+  <h2>网站技术架�?/h2>
+  <div class="grid-2" style="margin-top: 30px;">
+    <div class="card">
+      <h4>前端架构</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?�?HTML/CSS/JS（无框架�?/li>
+        <li>�?部署平台：Cloudflare Pages</li>
+        <li>�?域名：ouninshop.com</li>
+        <li>�?CDN：Cloudflare 全球加�?/li>
+        <li>�?无后端依赖，轻量�?/li>
+        <li>�?响应式设计，移动端适配</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>后端架构</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?Shopify（Headless 模式�?/li>
+        <li>�?产品�?�?Shopify 付款按钮</li>
+        <li>�?Shopify 后台管理订单/客户</li>
+        <li>�?客服系统：飞�?/li>
+        <li>�?域名已解析到 Cloudflare</li>
+      </ul>
+    </div>
+  </div>
+  <div class="icon-grid" style="margin-top:40px;">
+    <div class="icon-item">
+      <div class="icon">🌐</div>
+      <p>Cloudflare CDN</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon">🛒</div>
+      <p>Shopify Payment</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon">📱</div>
+      <p>Responsive</p>
+    </div>
+    <div class="icon-item">
+      <div class="icon">�?/div>
+      <p>Fast Loading</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 5: Products -->
+<div class="slide" data-slide="05">
+  <p class="section">Products</p>
+  <h2>产品线概�?/h2>
+  <div class="grid-4" style="margin-top:30px;">
+    <div class="card">
+      <h4>Pro Embedded</h4>
+      <p style="color:#D4A574;font-size:22px;margin:10px 0;">$250</p>
+      <p style="text-decoration:line-through;color:#666;">$399</p>
+      <ul style="font-size:14px;color:#ccc;line-height:1.8;margin-top:15px;list-style:none;">
+        <li>�?18in 家庭�?/li>
+        <li>�?10-in-1 多功�?/li>
+        <li>�?自清�?/li>
+        <li>�?18qt 大容�?/li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Compact</h4>
+      <p style="color:#D4A574;font-size:22px;margin:10px 0;">$250</p>
+      <p style="text-decoration:line-through;color:#666;">$429</p>
+      <ul style="font-size:14px;color:#ccc;line-height:1.8;margin-top:15px;list-style:none;">
+        <li>�?12L 小型</li>
+        <li>�?Steam & Crisp</li>
+        <li>�?8-in-1</li>
+        <li>�?空气炸组�?/li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Mini</h4>
+      <p style="color:#D4A574;font-size:22px;margin:10px 0;">$309</p>
+      <p style="text-decoration:line-through;color:#666;">$699</p>
+      <ul style="font-size:14px;color:#ccc;line-height:1.8;margin-top:15px;list-style:none;">
+        <li>�?24in 标准�?/li>
+        <li>�?25.4QT 超大容量</li>
+        <li>�?11-in-1</li>
+        <li>�?XL 家庭首�?/li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Elite Bundle</h4>
+      <p style="color:#D4A574;font-size:22px;margin:10px 0;">$150</p>
+      <p style="text-decoration:line-through;color:#666;">$299</p>
+      <ul style="font-size:14px;color:#ccc;line-height:1.8;margin-top:15px;list-style:none;">
+        <li>�?12in 紧凑�?/li>
+        <li>�?Steam Infusion</li>
+        <li>�?6-in-1</li>
+        <li>�?空气炸入门款</li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:30px;padding:20px;background:rgba(212,165,116,0.1);border-radius:12px;">
+    <p style="color:#D4A574;font-size:18px;">💡 定价策略：所有产品均设有原价/折扣价，营造促销感，促进转化</p>
+  </div>
+</div>
+
+<!-- Slide 6: Operations Summary -->
+<div class="slide" data-slide="06">
+  <p class="section">Operations</p>
+  <h2>已完成运营工�?/h2>
+  <div class="grid-2" style="margin-top:30px;">
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>网站基础搭建</h4>
+        <p>6个主要页�?+ 多个产品详情�?br>纯前端，无CDN依赖</p>
+      </div>
+      <div class="timeline-item">
+        <h4>购物车系�?/h4>
+        <p>右侧抽屉式购物车<br>localStorage 本地存储</p>
+      </div>
+      <div class="timeline-item">
+        <h4>会员系统</h4>
+        <p>Profile / 地址管理 / 修改密码<br>（Shopify Storefront API 集成�?/p>
+      </div>
+      <div class="timeline-item">
+        <h4>产品详情优化</h4>
+        <p>6个产品详情页内容丰富�?br>规格参数、买家秀、功能说�?/p>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Hero 视频优化</h4>
+        <p>压缩�?6.2MB<br>海报优先 + 延迟加载策略</p>
+      </div>
+      <div class="timeline-item">
+        <h4>全站推广语清�?/h4>
+        <p>移除所�?"100-day trial"<br>"Free shipping over $135" �?/p>
+      </div>
+      <div class="timeline-item">
+        <h4>移动端适配</h4>
+        <p>响应式布局<br>轮播图、移动端导航</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Cookie 弹窗</h4>
+        <p>首次访问自动弹出<br>localStorage 记录不再�?/p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 7: Tech Issues & Fixes -->
+<div class="slide" data-slide="07">
+  <p class="section">Technical</p>
+  <h2>技术问题与修复记录</h2>
+  <table>
+    <tr>
+      <th style="width:200px;">问题</th>
+      <th>描述</th>
+      <th style="width:200px;">修复方案</th>
+    </tr>
+    <tr>
+      <td>购物�?URL 添加 #</td>
+      <td>点击购物车按�?URL 出现 /#</td>
+      <td class="status-ok">�?已修�?/td>
+    </tr>
+    <tr>
+      <td>Unsplash 图片失效</td>
+      <td>CDN 在国内无法访�?/td>
+      <td class="status-ok">�?已修�?/td>
+    </tr>
+    <tr>
+      <td>GIF 动画模糊</td>
+      <td>gifsicle 压缩后清晰度下降</td>
+      <td class="status-ok">�?已修�?/td>
+    </tr>
+    <tr>
+      <td>FAQ 折叠失效</td>
+      <td>重复�?accordion JS 代码冲突</td>
+      <td class="status-ok">�?已修�?/td>
+    </tr>
+    <tr>
+      <td>Shopify API 401</td>
+      <td>Storefront API Token 获取失败</td>
+      <td class="status-ok">�?已修�?/td>
+    </tr>
+    <tr>
+      <td>购物车按�?href="#"</td>
+      <td>button �?href 属性但点击会改�?URL hash</td>
+      <td class="status-ok">�?已修�?/td>
+    </tr>
+  </table>
+</div>
+
+<!-- Slide 8: Current Todo -->
+<div class="slide" data-slide="08">
+  <p class="section">Progress</p>
+  <h2>当前待处理事�?/h2>
+  <div class="grid-2" style="margin-top:30px;">
+    <div class="card">
+      <h4>🔴 高优先级</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?Shopify 支付功能完整接入</li>
+        <li>�?域名 DNS 配置（确�?Shopify + CF 协同�?/li>
+        <li>�?订单状态页面设�?/li>
+        <li>�?客服系统优化（飞�?Bot 通知�?/li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🟡 中优先级</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?联系表单接入邮箱通知</li>
+        <li>�?产品评论/评分系统</li>
+        <li>�?社媒分享按钮</li>
+        <li>�?SEO 优化（meta tags, sitemap�?/li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🟢 低优先级</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?博客文章内容填充</li>
+        <li>�?Recipe 页面内容丰富</li>
+        <li>�?会员积分系统</li>
+        <li>�?Email 订阅功能</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🔵 长期规划</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?Google Analytics / Search Console</li>
+        <li>�?Facebook Pixel / TikTok Pixel</li>
+        <li>�?Google Ads / Facebook Ads 投放</li>
+        <li>�?多语言支持（欧洲市场）</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 9: Future Plans -->
+<div class="slide" data-slide="09">
+  <p class="section">Roadmap</p>
+  <h2>未来规划</h2>
+  <div class="grid-3" style="margin-top:30px;">
+    <div class="card">
+      <h4>Q2 2026</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?完成 Shopify 完整支付对接</li>
+        <li>�?上线自定义域�?/li>
+        <li>�?接入 Stripe 支付</li>
+        <li>�?启动社媒运营（Instagram/TikTok�?/li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Q3 2026</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?Google Ads 投放测试</li>
+        <li>�?SEO 全面优化</li>
+        <li>�?产品线扩展调�?/li>
+        <li>�?B2B 渠道探索</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Q4 2026</h4>
+      <ul style="font-size:15px;color:#ccc;line-height:2;">
+        <li>�?黑五网一促销活动</li>
+        <li>�?欧洲市场进入</li>
+        <li>�?多语言网站</li>
+        <li>�?年度复盘与战略调�?/li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:40px;padding:24px;background:rgba(212,165,116,0.08);border-radius:12px;border:1px solid rgba(212,165,116,0.2);">
+    <h3 style="margin-bottom:15px;">🎯 核心目标</h3>
+    <p style="font-size:18px;color:#ccc;line-height:1.8;">2026年实现独立站月销售流水突�?<span style="color:#D4A574;font-weight:700;font-size:24px;">$10,000</span>，建立品牌认知，降低对付费流量的依赖�?/p>
+  </div>
+</div>
+
+<!-- Slide 10: Summary -->
+<div class="slide" data-slide="10">
+  <p class="section">Summary</p>
+  <h2>总结</h2>
+  <div class="grid-4" style="margin-top:40px;">
+    <div class="metric-box">
+      <div class="num">4</div>
+      <div class="label">核心产品</div>
+    </div>
+    <div class="metric-box">
+      <div class="num">29+</div>
+      <div class="label">页面总数</div>
+    </div>
+    <div class="metric-box">
+      <div class="num">100%</div>
+      <div class="label">响应式适配</div>
+    </div>
+    <div class="metric-box">
+      <div class="num">0</div>
+      <div class="label">严重技术故�?/div>
+    </div>
+  </div>
+  <div style="margin-top:50px;text-align:center;">
+    <h3 style="font-size:28px;color:#ccc;line-height:1.8;">
+      OUNIN 独立站从零起步，已完成基础建设并稳定运行�?br>
+      接下来重点：<span style="color:#D4A574;">完善支付闭环 + 启动精准引流</span>
+    </h3>
+  </div>
+</div>
+
+<!-- Slide 11: Thank You -->
+<div class="slide cover" data-slide="11">
+  <div class="logo-big">OUNIN</div>
+  <h1>感谢观看</h1>
+  <p class="subtitle">Questions & Discussion</p>
+  <p style="margin-top:60px;font-size:18px;color:#666;">ouninshop.com | contact@ouninshop.com</p>
+</div>
+
+<script>
+// Simple keyboard navigation
+document.addEventListener('keydown', function(e) {
+  const slides = document.querySelectorAll('.slide');
+  const current = Array.from(slides).findIndex(s => s.getBoundingClientRect().top >= 0);
+  
+  if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+    e.preventDefault();
+    if (current < slides.length - 1) {
+      slides[current + 1].scrollIntoView({ behavior: 'smooth' });
+    }
+  } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+    e.preventDefault();
+    if (current > 0) {
+      slides[current - 1].scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+});
+</script>
+
+</body>
+</html>
