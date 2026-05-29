@@ -329,8 +329,20 @@
   <section class="image-text-section">
     <div class="container">
       <div class="image-text-grid">
-        <div class="image-text-img">
-          <img src="assets/images/placeholder.jpg" alt="Feature Image">
+        <div class="image-text-carousel" id="imgTextCarousel">
+          <div class="img-slide-track" id="imgSlideTrack">
+            <img src="assets/images/placeholder.jpg" alt="Feature 1" class="img-slide active">
+            <img src="assets/images/placeholder.jpg" alt="Feature 2" class="img-slide">
+            <img src="assets/images/placeholder.jpg" alt="Feature 3" class="img-slide">
+            <img src="assets/images/placeholder.jpg" alt="Feature 4" class="img-slide">
+          </div>
+          <div class="img-slide-dots" id="imgSlideDots"></div>
+          <button class="img-slide-btn img-slide-prev" id="imgSlidePrev" aria-label="Previous">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button class="img-slide-btn img-slide-next" id="imgSlideNext" aria-label="Next">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
         </div>
         <div class="image-text-content">
           <h2 class="image-text-title">Your Section Title Here</h2>
@@ -894,6 +906,65 @@
       });
       card.style.cursor = 'pointer';
     });
+
+    // Image Text Carousel
+    (function() {
+      const track = document.getElementById('imgSlideTrack');
+      if (!track) return;
+      const slides = track.querySelectorAll('.img-slide');
+      const dotsContainer = document.getElementById('imgSlideDots');
+      const prevBtn = document.getElementById('imgSlidePrev');
+      const nextBtn = document.getElementById('imgSlideNext');
+      let current = 0;
+
+      function buildDots() {
+        slides.forEach((_, i) => {
+          const d = document.createElement('span');
+          d.className = 'img-slide-dot' + (i === 0 ? ' active' : '');
+          d.addEventListener('click', () => goTo(i));
+          dotsContainer.appendChild(d);
+        });
+      }
+
+      function goTo(idx) {
+        if (idx === current) return;
+        const old = slides[current];
+        const neW = slides[idx];
+        const dir = idx > current ? 'left' : 'right';
+
+        neW.classList.remove('active', 'exit-left', 'exit-right');
+        neW.style.transform = dir === 'left' ? 'translateX(100%)' : 'translateX(-100%)';
+        neW.style.opacity = '0';
+
+        requestAnimationFrame(() => {
+          neW.classList.add('active');
+          neW.style.transform = 'translateX(0)';
+          neW.style.opacity = '1';
+
+          old.classList.remove('active');
+          old.classList.add(dir === 'left' ? 'exit-left' : 'exit-right');
+          old.style.transform = dir === 'left' ? 'translateX(-100%)' : 'translateX(100%)';
+          old.style.opacity = '0';
+          old.addEventListener('transitionend', () => {
+            old.classList.remove('exit-left', 'exit-right');
+            old.style.transform = '';
+            old.style.opacity = '';
+          }, { once: true });
+        });
+
+        dotsContainer.querySelectorAll('.img-slide-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === idx);
+        });
+        current = idx;
+      }
+
+      function next() { goTo((current + 1) % slides.length); }
+      function prev() { goTo((current - 1 + slides.length) % slides.length); }
+
+      if (prevBtn) prevBtn.addEventListener('click', prev);
+      if (nextBtn) nextBtn.addEventListener('click', next);
+      buildDots();
+    })();
   </script>
   <script>
     // Auth Modal Logic
