@@ -510,6 +510,14 @@
       popup.classList.remove('active');
       localStorage.setItem('cookieConsent', 'accepted');
     });
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        const link = card.querySelector('.product-info .product-name a') || card.querySelector('.product-img-wrap a');
+        if (link) link.click();
+      });
+    });
   </script>
 </body>
 </html>
