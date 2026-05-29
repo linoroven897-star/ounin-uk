@@ -1155,6 +1155,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   box-shadow: var(--shadow-lg);
   background: #f0f0f0;
+  perspective: 1200px;
 }
 
 .img-slide-track {
@@ -1162,6 +1163,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
+  transform-style: preserve-3d;
 }
 
 .img-slide {
@@ -1171,21 +1173,41 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateX(100%) rotateY(0deg);
+  transform-origin: left center;
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.6s ease;
+  backface-visibility: hidden;
   pointer-events: none;
 }
 
 .img-slide.active {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateX(0) rotateY(0deg);
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.6s ease;
   pointer-events: auto;
-  z-index: 1;
+  z-index: 2;
 }
 
 .img-slide.exit-left {
-  transform: translateX(-100%);
+  transform: translateX(-100%) rotateY(-25deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.img-slide.exit-right {
+  transform: translateX(100%) rotateY(25deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.img-slide.enter-right {
+  transform: translateX(100%) rotateY(25deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.img-slide.enter-left {
+  transform: translateX(-100%) rotateY(-25deg);
   opacity: 0;
   pointer-events: none;
 }
