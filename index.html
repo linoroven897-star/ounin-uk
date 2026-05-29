@@ -330,11 +330,11 @@
     <div class="container">
       <div class="image-text-grid">
         <div class="image-text-carousel" id="imgTextCarousel">
-          <div class="img-slide-track" id="imgSlideTrack">
-            <img src="assets/images/carousel/1.jpg" alt="Feature 1" class="img-slide active">
-            <img src="assets/images/carousel/2.jpg" alt="Feature 2" class="img-slide">
-            <img src="assets/images/carousel/3.jpg" alt="Feature 3" class="img-slide">
-            <img src="assets/images/carousel/4.jpg" alt="Feature 4" class="img-slide">
+          <div class="img-slide-stack" id="imgSlideStack">
+            <img src="assets/images/carousel/1.jpg" alt="Feature 1" class="img-card active-card">
+            <img src="assets/images/carousel/2.jpg" alt="Feature 2" class="img-card">
+            <img src="assets/images/carousel/3.jpg" alt="Feature 3" class="img-card">
+            <img src="assets/images/carousel/4.jpg" alt="Feature 4" class="img-card">
           </div>
           <div class="img-slide-dots" id="imgSlideDots"></div>
           <button class="img-slide-btn img-slide-prev" id="imgSlidePrev" aria-label="Previous">
@@ -907,18 +907,18 @@
       card.style.cursor = 'pointer';
     });
 
-    // Image Text Carousel
+    // Image Text Carousel - Stacked Cards
     (function() {
-      const track = document.getElementById('imgSlideTrack');
-      if (!track) return;
-      const slides = track.querySelectorAll('.img-slide');
+      const stack = document.getElementById('imgSlideStack');
+      if (!stack) return;
+      const cards = stack.querySelectorAll('.img-card');
       const dotsContainer = document.getElementById('imgSlideDots');
       const prevBtn = document.getElementById('imgSlidePrev');
       const nextBtn = document.getElementById('imgSlideNext');
       let current = 0;
 
       function buildDots() {
-        slides.forEach((_, i) => {
+        cards.forEach((_, i) => {
           const d = document.createElement('span');
           d.className = 'img-slide-dot' + (i === 0 ? ' active' : '');
           d.addEventListener('click', () => goTo(i));
@@ -928,31 +928,16 @@
 
       function goTo(idx) {
         if (idx === current) return;
-        const old = slides[current];
-        const neW = slides[idx];
-        const dir = idx > current ? 'left' : 'right';
+        const old = cards[current];
+        const neW = cards[idx];
 
-        neW.classList.remove('active', 'exit-left', 'exit-right', 'enter-left', 'enter-right');
-        neW.style.transform = dir === 'left' ? 'translateX(100%) rotateY(25deg)' : 'translateX(-100%) rotateY(-25deg)';
-        neW.style.opacity = '0';
+        neW.classList.add('active-card');
+        old.classList.remove('active-card');
+        old.classList.add('exit-card');
 
-        requestAnimationFrame(() => {
-          neW.classList.add('active');
-          neW.style.transform = 'translateX(0) rotateY(0deg)';
-          neW.style.opacity = '1';
-
-          old.classList.remove('active');
-          old.classList.add(dir === 'left' ? 'exit-left' : 'exit-right');
-          old.style.transform = dir === 'left' ? 'translateX(-100%) rotateY(-25deg)' : 'translateX(100%) rotateY(25deg)';
-          old.style.opacity = '0';
-
-          const cleanup = () => {
-            old.classList.remove('exit-left', 'exit-right', 'enter-left', 'enter-right');
-            old.style.transform = '';
-            old.style.opacity = '';
-          };
-          old.addEventListener('transitionend', cleanup, { once: true });
-        });
+        setTimeout(() => {
+          old.classList.remove('exit-card');
+        }, 700);
 
         dotsContainer.querySelectorAll('.img-slide-dot').forEach((d, i) => {
           d.classList.toggle('active', i === idx);
@@ -960,8 +945,8 @@
         current = idx;
       }
 
-      function next() { goTo((current + 1) % slides.length); }
-      function prev() { goTo((current - 1 + slides.length) % slides.length); }
+      function next() { goTo((current + 1) % cards.length); }
+      function prev() { goTo((current - 1 + cards.length) % cards.length); }
 
       if (prevBtn) prevBtn.addEventListener('click', prev);
       if (nextBtn) nextBtn.addEventListener('click', next);
