@@ -1122,6 +1122,65 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
+   IMAGE TEXT SECTION
+   ======================================== */
+.image-text-section {
+  padding: 80px 0;
+  background-color: var(--color-surface);
+}
+
+.image-text-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.image-text-img {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.image-text-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.image-text-content {
+  max-width: 520px;
+}
+
+.image-text-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.image-text-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .image-text-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .image-text-title {
+    font-size: 28px;
+  }
+}
+
+/* ========================================
    FEATURES HIGHLIGHT (3 GIF)
    ======================================== */
 .features-highlight {
