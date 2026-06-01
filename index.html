@@ -169,7 +169,7 @@
       <div class="hero-poster" id="hero-poster">
         <img src="assets/images/hero-banner-poster.png" alt="" fetchpriority="high" loading="eager">
       </div>
-      <video muted loop playsinline webkit-playsinline preload="none" class="hero-video-desktop" id="hero-video">
+      <video muted loop playsinline autoplay class="hero-video-desktop" style="opacity:1">
         <source src="assets/videos/hero-video.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
@@ -1105,33 +1105,7 @@
     });
   </script>
   <script>
-    // Ensure hero video plays smoothly without stutter
-    // Poster shows first, video loads in background, then swaps in
-    (function() {
-      var video = document.getElementById('hero-video');
-      var poster = document.getElementById('hero-poster');
-      if (!video) return;
-
-      // Start loading video AFTER page has fully loaded (background)
-      window.addEventListener('load', function() {
-        // Give other critical resources a head start (200ms buffer)
-        setTimeout(function() {
-          video.load();
-        }, 200);
-      });
-
-      // When video is ready to play through without buffering, swap it in
-      video.addEventListener('canplaythrough', function() {
-        // Fade in video
-        video.classList.add('video-ready');
-        // Fade out poster
-        if (poster) {
-          poster.classList.add('hidden');
-        }
-        // Start playback
-        video.play().catch(function() {});
-      });
-    })();
+    // Hero video - autoplay, no lazy loading
   </script>
 
   <!-- COOKIE CONSENT POPUP -->
